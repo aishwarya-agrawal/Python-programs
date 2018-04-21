@@ -18,6 +18,7 @@ Just Print the Score obtained by Student </p> <p><strong>Sample Input&nbsp;&nbsp
 *points(will not be present in input)</strong></p> <p>Name: Aadish</p> <p>120 * 68 &gt; 8162 True&nbsp;
 0<br />115 / 70 = 5.64 False 1<br />93 * 55 &lt;= 5111 True 0<br />140 / 24 = 3.83 False 1<br />103 + 44 != 147 False 1<br />107 + 84 != 192 True 1<br />116 / 37 &gt;= -0.86 True 1<br />168 - 5 &gt;= 166 False 1<br />95 - 62 = 36 False 1<br />131 / 45 = -0.09 False 1</p> <p>Score:</p> <p><strong>Sample Output</strong></p> <p>&nbsp;8</p>
 '''
+# to convert string to arithmetic operator
 def arthoperator(op1,arthop,op2):
     if arthop == '*':
         return float(op1)*float(op2)
@@ -27,7 +28,7 @@ def arthoperator(op1,arthop,op2):
         return float(op1)-float(op2)
     if arthop == '+':
         return float(op1)+float(op2)
-
+# to convert string to comparison operator
 def compare(op1,comp,op2):
     if comp == ">=":
         return float(format(float(op1),'.2f')) >= float(format(float(op2),'.2f'))
@@ -41,11 +42,13 @@ def compare(op1,comp,op2):
         return float(format(float(op1),'.2f'))!=float(format(float(op2),'.2f'))
     if comp == "=":
         return float(format(float(op1),'.2f'))==float(format(float(op2),'.2f'))
+# to convert string to bool
 def answer(ans):
     if ans == "True":
         return True
     if ans == "False":
         return False
+# the main program starts
 name = input()
 space = input()
 l = [None]*10
