@@ -23,5 +23,6 @@ def ChangeHept(n):
         if (x == 16):
             print("g",end="")
         
-ChangeHept(199)
+i = int(input("Enter number : "))
+ChangeHept(i)
 
